@@ -1,0 +1,127 @@
+{
+    "id": "#my_process",
+    "main": {
+        "steps": {
+            "start": {
+                "type": "perform",
+                "action": "navigate",
+                "args": {
+                    "url": "https://localhost:1100/contoso/test/"
+                },
+                "next_step": "step_1",
+                "name": "start"
+            },
+            "step_1": {
+                "type": "wait",
+                "action": "time",
+                "args": {
+                    "timeout": 3
+                },
+                "next_step": "step_2",
+                "name": "step_1"
+            },
+            "step_2": {
+                "type": "perform",
+                "action": "click",
+                "args": {
+                    "query": "li[name='development_azure_account']"
+                },
+                "next_step": "step_3",
+                "name": "step_2"
+            },
+            "step_3": {
+                "type": "wait",
+                "action": "window_count",
+                "args": {
+                    "query": "",
+                    "count": 2
+                },
+                "next_step": "step_4",
+                "name": "step_3"
+            },
+            "step_4": {
+                "type": "perform",
+                "action": "switch_to_tab",
+                "args": {
+                    "index": 1
+                },
+                "next_step": "step_5",
+                "name": "step_4"
+            },
+            "step_5": {
+                "type": "wait",
+                "action": "element",
+                "args": {
+                    "query": "input[name='loginfmt']"
+                },
+                "next_step": "step_6",
+                "name": "step_5"
+            },
+            "step_6": {
+                "type": "perform",
+                "action": "type_text",
+                "args": {
+                    "query": "input[name='loginfmt']",
+                    "value": "test@pragmadeveloper.onmicrosoft.com"
+                },
+                "next_step": "step_7",
+                "name": "step_6"
+            },
+            "step_7": {
+                "type": "wait",
+                "action": "element",
+                "args": {
+                    "query": "input[name='passwd']"
+                },
+                "next_step": "step_8",
+                "name": "step_7"
+            },
+            "step_8": {
+                "type": "perform",
+                "action": "type_text",
+                "args": {
+                    "query": "input[name='passwd']",
+                    "value": "NtHe7t2EFLqFbM"
+                },
+                "next_step": "step_9"
+            },
+            "step_9": {
+                "type": "perform",
+                "action": "switch_to_tab",
+                "args": {},
+                "next_step": "step_10"
+            },
+            "step_10": {
+                "type": "perform",
+                "action": "click",
+                "args": {
+                    "query": "input[type='submit']"
+                },
+                "next_step": "step_11"
+            },
+            "step_11": {
+                "type": "perform",
+                "action": "click",
+                "args": {
+                    "query": "#idSIButton9"
+                },
+                "next_step": "step_12"
+            },
+            "step_12": {
+                "type": "perform",
+                "action": "switch_to_tab",
+                "args": {
+                    "index": 0
+                },
+                "next_step": "step_13"
+            },
+            "step_13": {
+                "type": "wait",
+                "action": "time",
+                "args": {
+                    "timeout": 5
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+2023-10-26 14:55:33,081 - process_api - INFO - run schema: "#my_process"
+2023-10-26 14:55:33,081 - process_api - INFO - run process: "main"
+2023-10-26 14:55:33,081 - process_api - INFO - run step: "start"
+2023-10-26 14:55:33,388 - process_api - INFO - run step: "step_1"
+2023-10-26 14:55:35,394 - process_api - INFO - run step: "step_2"
+2023-10-26 14:55:35,488 - process_api - INFO - run step: "step_3"
+2023-10-26 14:55:45,778 - process_api - ERROR - Message: 
+
+2023-10-26 14:55:45,778 - process_api - ERROR - Traceback (most recent call last):
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\__init__.py", line 82, in run
+    return await self.process_runner.run_step(self, step, ctx, process, item, callback)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\process_runner.py", line 48, in run_step
+    return await self.run_step(api, next_step, ctx, process, item, callback)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\process_runner.py", line 48, in run_step
+    return await self.run_step(api, next_step, ctx, process, item, callback)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\process_runner.py", line 48, in run_step
+    return await self.run_step(api, next_step, ctx, process, item, callback)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\process_runner.py", line 27, in run_step
+    result = await function(api, step, ctx, process, item)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\modules\selenium_wait.py", line 98, in window_count
+    WebDriverWait(selenium_driver, timeout).until(window_count_callback(None, args))
+  File "C:\Development\PragmaDev\ui_testing_service\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+2023-10-26 14:55:54,060 - process_api - INFO - Task 4230a18f-d1be-4410-8aca-d2c0cf3b767a completed in 00:00:15:946

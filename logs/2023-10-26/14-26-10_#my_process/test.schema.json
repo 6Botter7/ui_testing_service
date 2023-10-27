@@ -1,0 +1,71 @@
+{
+    "id": "#my_process",
+    "main": {
+        "steps": {
+            "start": {
+                "type": "perform",
+                "action": "navigate",
+                "args": {
+                    "url": "https://localhost:1100/contoso/test/"
+                },
+                "next_step": "step_1",
+                "name": "start"
+            },
+            "step_1": {
+                "type": "wait",
+                "action": "time",
+                "args": {
+                    "timeout": 5
+                },
+                "next_step": "step_2",
+                "name": "step_1"
+            },
+            "step_2": {
+                "type": "perform",
+                "action": "click",
+                "args": {
+                    "query": "li[name='development_azure_account']"
+                },
+                "next_step": "step_3",
+                "name": "step_2"
+            },
+            "step_3": {
+                "type": "wait",
+                "action": "window_count",
+                "args": {
+                    "query": "",
+                    "count": 2
+                },
+                "next_step": "step_4",
+                "name": "step_3"
+            },
+            "step_4": {
+                "type": "perform",
+                "action": "switch_to_tab",
+                "args": {
+                    "index": 1
+                },
+                "next_step": "step_5",
+                "name": "step_4"
+            },
+            "step_5": {
+                "type": "wait",
+                "action": "element",
+                "args": {
+                    "query": "input[name='loginfmt']"
+                },
+                "next_step": "step_6",
+                "name": "step_5"
+            },
+            "step_6": {
+                "type": "perform",
+                "action": "type_text",
+                "args": {
+                    "query": "input[name='loginfmt']",
+                    "value": "NtHe7t2EFLqFbM"
+                },
+                "name": "step_6"
+            }
+        }
+    }
+}

@@ -1,10 +1,10 @@
 [
     {
-        "text": "localhost",
-        "value": "https://localhost"
+        "text": "onkey-local",
+        "value": "https://localhost:1100/contoso/test/"
     },
     {
-        "text": "google",
-        "value": "https://www.google.com"
+        "text": "onkey-daily",
+        "value": "https://onkeydev.pragmaproducts.com/contoso/daily/"
     }
 ]

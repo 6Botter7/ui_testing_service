@@ -1,0 +1,84 @@
+{
+    "id": "custom_permissions",
+    "main": {
+        "steps": {
+            "start": {
+                "type": "perform",
+                "action": "navigate",
+                "args": {
+                    "url": "https://onkeydev.pragmaproducts.com/contoso/daily/#dashboard/User"
+                },
+                "next_step": "step_1"
+            },
+            "step_1": {
+                "type": "perform",
+                "action": "click",
+                "args": {
+                    "query": "[id='search-button']"
+                },
+                "next_step": "step_2"
+            },
+            "step_2": {
+                "type": "perform",
+                "action": "type_text",
+                "args": {
+                    "query": "[id='main-view'] input",
+                    "value": "test7"
+                },
+                "next_step": "step_3"
+            },
+            "step_3": {
+                "type": "perform",
+                "action": "press_key",
+                "args": {
+                    "query": "body",
+                    "key": "Enter"
+                },
+                "next_step": "step_4"
+            },
+            "step_4": {
+                "type": "perform",
+                "action": "dbl_click",
+                "args": {
+                    "query": "[id='body'] div:nth-of-type(4)"
+                },
+                "next_step": "step_5"
+            },
+            "step_5": {
+                "type": "perform",
+                "action": "click_sequence",
+                "args": {
+                    "sequence": [
+                        [
+                            "[id='pb-3_templatesUserCustomPermissions']"
+                        ],
+                        [
+                            "[id='plus-multiple']"
+                        ],
+                        [
+                            "div:nth-of-type(5) [id='unchecked']"
+                        ],
+                        [
+                            "[id='accept']"
+                        ],
+                        [
+                            "[id='addPermission']"
+                        ],
+                        [
+                            "pragma-action-dialog:nth-of-type(3) div.items-container > div:nth-of-type(1) [id='unchecked']"
+                        ],
+                        [
+                            "pragma-action-dialog:nth-of-type(3) [id='accept']"
+                        ],
+                        [
+                            "[id='applyDownPermissionTreeToggle']"
+                        ],
+                        [
+                            "[id='accept']"
+                        ]
+                    ]
+                }
+            }
+        }
+    }
+}

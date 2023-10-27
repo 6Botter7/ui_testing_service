@@ -1,0 +1,11 @@
+{
+    "name": "#my_process",
+    "status": "error",
+    "start_time": "2023-10-26 09:43:10",
+    "end_time": "2023-10-26 09:43:18",
+    "duration": "00:00:08:505",
+    "browser": "chrome",
+    "log": "C:\\Development\\PragmaDev\\ui_testing_service\\logs\\2023-10-26\\ERROR_09-43-18_#my_process\\test.log",
+    "error_count": 2,
+    "memory_diff": 0.0
+}

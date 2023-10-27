@@ -1,0 +1,23 @@
+2023-10-26 10:13:41,712 - process_api - INFO - run schema: "#my_process"
+2023-10-26 10:13:41,712 - process_api - INFO - run process: "main"
+2023-10-26 10:13:41,712 - process_api - INFO - run step: "start"
+2023-10-26 10:13:44,512 - process_api - INFO - run step: "step_1"
+2023-10-26 10:13:54,650 - process_api - ERROR - Message: 
+
+2023-10-26 10:13:54,650 - process_api - ERROR - Traceback (most recent call last):
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\__init__.py", line 82, in run
+    return await self.process_runner.run_step(self, step, ctx, process, item, callback)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\process_runner.py", line 27, in run_step
+    result = await function(api, step, ctx, process, item)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\__init__.py", line 76, in perform
+    await perform(selenium_driver, step["args"])
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\automation\perform.py", line 15, in perform
+    element = await get_element(context, query, timeout)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\automation\get.py", line 39, in get_element
+    return wait.until(element_usable_callback(element))
+  File "C:\Development\PragmaDev\ui_testing_service\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+2023-10-26 10:13:59,298 - process_api - INFO - Task c0920547-9e48-4735-8350-2fe44d68cbde completed in 00:00:16:724

@@ -1,0 +1,11 @@
+{
+    "name": "#pin-side-menu",
+    "status": "error",
+    "start_time": "2023-10-26 13:55:01",
+    "end_time": "2023-10-26 13:55:05",
+    "duration": "00:00:03:293",
+    "browser": "chrome",
+    "log": "C:\\Development\\PragmaDev\\ui_testing_service\\logs\\2023-10-26\\ERROR_13-55-05_#pin-side-menu\\test.log",
+    "error_count": 2,
+    "memory_diff": 0.0
+}

@@ -1,0 +1,40 @@
+2023-10-25 13:38:16,877 - process_api - INFO - run schema: "#my_process"
+2023-10-25 13:38:16,877 - process_api - INFO - run process: "main"
+2023-10-25 13:38:16,877 - process_api - INFO - run step: "start"
+2023-10-25 13:38:23,277 - process_api - ERROR - Message: Reached error page: about:neterror?e=connectionFailure&u=https%3A//localhost/&c=UTF-8&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost.
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:189:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:768:5
+checkReadyState@chrome://remote/content/marionette/navigate.sys.mjs:59:24
+onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:327:39
+emit@resource://gre/modules/EventEmitter.sys.mjs:154:20
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
+
+2023-10-25 13:38:23,289 - process_api - ERROR - Traceback (most recent call last):
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\__init__.py", line 82, in run
+    return await self.process_runner.run_step(self, step, ctx, process, item, callback)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\process_runner.py", line 27, in run_step
+    result = await function(api, step, ctx, process, item)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\__init__.py", line 37, in goto
+    await goto(selenium_driver, url)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\automation\navigate.py", line 2, in goto
+    driver.get(url)
+  File "C:\Development\PragmaDev\ui_testing_service\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 353, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Development\PragmaDev\ui_testing_service\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "C:\Development\PragmaDev\ui_testing_service\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&u=https%3A//localhost/&c=UTF-8&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost.
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:189:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:768:5
+checkReadyState@chrome://remote/content/marionette/navigate.sys.mjs:59:24
+onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:327:39
+emit@resource://gre/modules/EventEmitter.sys.mjs:154:20
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
+
+
+2023-10-25 13:38:28,993 - process_api - INFO - Task dc257872-1c1e-47e8-8401-1a96836984c9 completed in 00:00:15:043

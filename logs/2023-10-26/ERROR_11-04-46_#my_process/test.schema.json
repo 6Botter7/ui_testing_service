@@ -1,0 +1,25 @@
+{
+    "id": "#my_process",
+    "main": {
+        "steps": {
+            "start": {
+                "type": "perform",
+                "action": "navigate",
+                "args": {
+                    "url": "https://www.google.com"
+                },
+                "next_step": "step_1",
+                "name": "start"
+            },
+            "step_1": {
+                "type": "perform",
+                "action": "type_text",
+                "args": {
+                    "query": "#input",
+                    "value": "hello"
+                },
+                "name": "step_1"
+            }
+        }
+    }
+}

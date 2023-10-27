@@ -1,0 +1,23 @@
+{
+    "id": "#pin-side-menu",
+    "main": {
+        "steps": {
+            "start": {
+                "type": "perform",
+                "action": "navigate",
+                "args": {
+                    "url": "${state.server}/#welcome"
+                },
+                "next_step": "step_1",
+                "name": "start"
+            },
+            "step_1": {
+                "type": "wait",
+                "action": "time",
+                "args": {
+                    "timeout": 5
+                }
+            }
+        }
+    }
+}

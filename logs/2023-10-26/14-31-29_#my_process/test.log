@@ -1,0 +1,6 @@
+2023-10-26 14:31:21,992 - process_api - INFO - run schema: "#my_process"
+2023-10-26 14:31:21,992 - process_api - INFO - run process: "main"
+2023-10-26 14:31:21,992 - process_api - INFO - run step: "start"
+2023-10-26 14:31:22,294 - process_api - INFO - run step: "step_1"
+2023-10-26 14:31:27,296 - process_api - INFO - run step: "step_2"
+2023-10-26 14:31:48,503 - process_api - INFO - Task 5f9b8c0f-db73-4ad3-a1e7-4a8aebf23b17 completed in 00:00:08:840

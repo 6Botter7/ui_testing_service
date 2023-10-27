@@ -1,0 +1,33 @@
+2023-10-26 11:02:10,140 - process_api - INFO - run schema: "#my_process"
+2023-10-26 11:02:10,140 - process_api - INFO - run process: "main"
+2023-10-26 11:02:10,140 - process_api - INFO - run step: "start"
+2023-10-26 11:02:12,796 - process_api - INFO - run step: "step_1"
+2023-10-26 11:02:22,872 - process_api - ERROR - Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:189:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:507:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:132:16
+
+2023-10-26 11:02:22,872 - process_api - ERROR - Traceback (most recent call last):
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\__init__.py", line 82, in run
+    return await self.process_runner.run_step(self, step, ctx, process, item, callback)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\process_runner.py", line 27, in run_step
+    result = await function(api, step, ctx, process, item)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\__init__.py", line 76, in perform
+    await perform(selenium_driver, step["args"])
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\automation\perform.py", line 15, in perform
+    element = await get_element(context, query, timeout)
+  File "C:\Development\PragmaDev\ui_testing_service\process_api\modules\selenium\automation\get.py", line 34, in get_element
+    element = wait.until(element_callback(None, {
+  File "C:\Development\PragmaDev\ui_testing_service\venv\lib\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:189:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:507:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:132:16
+
+
+2023-10-26 11:02:48,027 - process_api - INFO - Task f0d5825f-9b7c-4abe-9a56-f95bc913625c completed in 00:00:18:883

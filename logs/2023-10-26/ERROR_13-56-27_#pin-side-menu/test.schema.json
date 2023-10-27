@@ -1,0 +1,15 @@
+{
+    "id": "#pin-side-menu",
+    "main": {
+        "steps": {
+            "start": {
+                "type": "perform",
+                "action": "navigate",
+                "args": {
+                    "url": "${state.server}/#welcome"
+                },
+                "name": "start"
+            }
+        }
+    }
+}

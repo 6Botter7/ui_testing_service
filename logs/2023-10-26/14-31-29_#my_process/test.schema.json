@@ -1,0 +1,33 @@
+{
+    "id": "#my_process",
+    "main": {
+        "steps": {
+            "start": {
+                "type": "perform",
+                "action": "navigate",
+                "args": {
+                    "url": "https://localhost:1100/contoso/test/"
+                },
+                "next_step": "step_1",
+                "name": "start"
+            },
+            "step_1": {
+                "type": "wait",
+                "action": "time",
+                "args": {
+                    "timeout": 5
+                },
+                "next_step": "step_2",
+                "name": "step_1"
+            },
+            "step_2": {
+                "type": "perform",
+                "action": "click",
+                "args": {
+                    "query": "li[name='development_azure_account']"
+                },
+                "name": "step_2"
+            }
+        }
+    }
+}
